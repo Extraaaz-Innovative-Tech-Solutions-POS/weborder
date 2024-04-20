@@ -1177,7 +1177,7 @@
             <div class="container wow fadeInUp" data-wow-duration="1s">
                 <div class="row justify-content-between">
                     <div class="col-xxl-4 col-lg-4 col-sm-9 col-md-7">
-                        <div class="footer_content">
+                        <div class="footer_content"> 
                             <a class="footer_logo" href="index.html">
                                 <img src="yuvraj/images/footer_logo.png" alt="RegFood" class="img-fluid w-100">
                             </a>
