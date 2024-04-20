@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="css/jquery.exzoom.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+
+    
 </head>
 
 <body>
