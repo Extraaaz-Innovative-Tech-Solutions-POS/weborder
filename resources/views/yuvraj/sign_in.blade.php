@@ -2,23 +2,26 @@
 <html lang="en">
 
 
-<!-- Mirrored from html.themefax.com/regfood/forgot_password.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Apr 2024 09:08:19 GMT -->
+<!-- Mirrored from html.themefax.com/regfood/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Apr 2024 09:07:41 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
-        <title>ExtraaazPos || Web Ordering </title>
-        <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/nice-select.css">
-    <link rel="stylesheet" href="css/custom_spacing.css">
-    <link rel="stylesheet" href="css/venobox.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/jquery.exzoom.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <title>ExtraaazPos || Web Ordering </title>
+    <link rel="icon" type="image/png" href="yuvraj/images/favicon.png">
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link  href="{{ asset('yuvraj/css/style.css')}}" rel="stylesheet">
+    <link  href="{{ asset('yuvraj/css/all.min.css')}}" rel="stylesheet">
+    <link  href="{{ asset('yuvraj/css/animate.css')}}" rel="stylesheet">
+    <link  href="{{ asset('yuvraj/css/bootstrap.css')}}" rel="stylesheet">
+    <link  href="{{ asset('yuvraj/css/custom_spacing.css')}}" rel="stylesheet">
+    <link  href="{{ asset('yuvraj/css/jquery.exzoom.css')}}" rel="stylesheet">
+    <link  href="{{ asset('yuvraj/css/nice-select.css')}}" rel="stylesheet">
+    <link  href="{{ asset('yuvraj/css/responsive.css')}}" rel="stylesheet">
+    <link  href="{{ asset('yuvraj/css/slick.css')}}" rel="stylesheet">
+    <link  href="{{ asset('yuvraj/css/venobox.css')}}" rel="stylesheet"> 
 </head>
 
 <body>
@@ -62,8 +65,8 @@
     ==============================-->
     <nav class="navbar navbar-expand-lg main_menu">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" alt="RegFood" class="img-fluid">
+            <a class="navbar-brand" href="{{ url('/')}}">
+                <img src="yuvraj/images/logo.png" alt="RegFood" class="img-fluid">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,40 +76,28 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav m-auto">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{{ url('/')}}">Home</a>
                     </li>
+                    
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">about</a>
-                    </li>
+                        <a class="nav-link" href="{{ url('/menu')}}">menu</a>
+                    </li> 
                     <li class="nav-item">
-                        <a class="nav-link" href="menu.html">menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="chefs.html">chefs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">pages <i class="far fa-angle-down"></i></a>
+                        <a class="nav-link" href="#">pages <i class="far fa-angle-down"></i></a>
                         <ul class="droap_menu">
-                            <li><a href="menu_details.html">menu details</a></li>
-                            <li><a href="blog_details.html">blog details</a></li>
-                            <li><a href="cart_view.html">cart view</a></li>
-                            <li><a href="check_out.html">checkout</a></li>
-                            <li><a href="payment.html">payment</a></li>
-                            <li><a href="testimonial.html">testimonial</a></li>
-                            <li><a href="404.html">404/Error</a></li>
-                            <li><a href="faq.html">FAQs</a></li>
-                            <li><a href="sign_in.html">sign in</a></li>
-                            <li><a href="sign_up.html">sign up</a></li>
-                            <li><a class="active" href="forgot_password.html">forgot password</a></li>
-                            <li><a href="privacy_policy.html">privacy policy</a></li>
-                            <li><a href="terms_condition.html">terms and condition</a></li>
-                        </ul>
+                            <li><a href="{{ url('/menu_details')}}">menu details</a></li>
+                             <li><a href="{{ url('/cart_view')}}">cart view</a></li>
+                            <li><a href="{{ url('/check_out')}}">checkout</a></li>
+                            <li><a href="{{ url('/payment')}}">payment</a></li>
+                             <li><a href="{{ url('/404')}}">404/Error</a></li>
+                             <!-- <li><a href="sign_in.html">sign in</a></li> -->
+                            <!-- <li><a href="sign_up.html">sign up</a></li> -->
+                            <!-- <li><a href="forgot_password.html">forgot password</a></li> -->
+                         </ul>
                     </li>
+                    
                     <li class="nav-item">
-                        <a class="nav-link" href="blogs.html">blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">contact</a>
+                        <a class="nav-link" href="{{ url('/contact')}}">contact</a>
                     </li>
                 </ul>
                 <ul class="menu_icon d-flex flex-wrap">
@@ -117,7 +108,11 @@
                     <li>
                         <a href="dashboard.html"><i class="fas fa-user"></i></a>
                     </li>
+                   
+                    
+                    
                 </ul>
+              
             </div>
         </div>
     </nav>
@@ -129,14 +124,14 @@
     <!--=============================
         BREADCRUMB START
     ==============================-->
-    <section class="page_breadcrumb" style="background: url(images/counter_bg.jpg);">
+    <section class="page_breadcrumb" style="background: url(yuvraj/images/counter_bg.jpg);">
         <div class="breadcrumb_overlay">
             <div class="container">
                 <div class="breadcrumb_text">
-                    <h1>forgot password</h1>
+                    <h1>sign in</h1>
                     <ul>
-                        <li><a href="index.html">home</a></li>
-                        <li><a href="#">forgot password</a></li>
+                        <li><a href="{{ url('/')}}">home</a></li>
+                        <li><a href="{{ url('/sign_in')}}">sign in</a></li>
                     </ul>
                 </div>
             </div>
@@ -148,7 +143,7 @@
 
 
     <!--=========================
-        FORGOT PASSWORD START 
+        SIGNIN START
     ==========================-->
     <section class="signin pt_100 xs_pt_70 pb_100 xs_pb_70">
         <div class="container">
@@ -156,7 +151,7 @@
                 <div class="col-xl-5 col-sm-10 col-md-8 col-lg-6">
                     <div class="login_area">
                         <h2>Welcome back!</h2>
-                        <p>forgot password</p>
+                        <p>sign in to continue</p>
                         <form>
                             <div class="row">
                                 <div class="col-xl-12">
@@ -166,14 +161,36 @@
                                 </div>
                                 <div class="col-xl-12">
                                     <div class="login_imput">
-                                        <button type="submit" class="common_btn">verify mail</button>
+                                        <input type="password" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="col-xl-12">
+                                    <div class="login_imput login_check_area">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Remeber Me
+                                            </label>
+                                        </div>
+                                        <a href="{{ url('/forgot_password')}}">Forgot Password ?</a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12">
+                                    <div class="login_imput">
+                                        <button type="submit" class="common_btn">login</button>
                                     </div>
                                 </div>
                             </div>
                         </form>
-                        <p class="create_account d-flex justify-content-between">
-                            <a href="sign_in.html">login</a>
-                            <a href="sign_up.html">Create Account</a>
+                        <p class="or"><span>or</span></p>
+                        <ul class="d-flex">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                        </ul>
+                        <p class="create_account">Dont’t have an aceount ? <a   href="{{ url('/sign_up')}}">Create Account</a>
                         </p>
                     </div>
                 </div>
@@ -181,21 +198,21 @@
         </div>
     </section>
     <!--=========================
-        FORGOT PASSWORD END
+        SIGNIN END
     ==========================-->
 
 
     <!--=============================
         FOOTER START
     ==============================-->
-    <footer style="background: url(images/footer_bg.jpg);">
+    <footer style="background: url(yuvraj/images/footer_bg.jpg);">
         <div class="footer_overlay pt_100 xs_pt_70 pb_100 xs_pb_20">
             <div class="container wow fadeInUp" data-wow-duration="1s">
                 <div class="row justify-content-between">
                     <div class="col-xxl-4 col-lg-4 col-sm-9 col-md-7">
                         <div class="footer_content">
                             <a class="footer_logo" href="index.html">
-                                <img src="images/footer_logo.png" alt="RegFood" class="img-fluid w-100">
+                                <img src="yuvraj/images/footer_logo.png" alt="RegFood" class="img-fluid w-100">
                             </a>
                             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta facere delectus qui
                                 placeat inventore consectetur repellendus optio debitis.</span>
@@ -270,35 +287,48 @@
     ==============================-->
 
 
-    <!--jquery library js-->
-    <script src="js/jquery-3.6.0.min.js"></script>
+     <!--jquery library js-->
+     <script src="{{ asset('yuvraj/js/jquery-3.6.0.min.js')}}"></script>
     <!--bootstrap js-->
-    <script src="js/bootstrap.bundle.min.js"></script>
+     <script src="{{asset('yuvraj/js/bootstrap.bundle.min.js')}}"></script>
+
     <!--font-awesome js-->
-    <script src="js/Font-Awesome.js"></script>
+     <script src="{{asset('yuvraj/js/Font-Awesome.js')}}"></script>
     <!-- slick slider -->
-    <script src="js/slick.min.js"></script>
+     <script src="{{asset('yuvraj/js/Font-Awesome.js')}}"></script>
+
     <!-- isotop js -->
-    <script src="js/isotope.pkgd.min.js"></script>
+     <script src="{{asset('yuvraj/js/isotope.pkgd.min.js')}}"></script>
+
     <!-- counter up js -->
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.countup.min.js"></script>
+     <script src="{{asset('yuvraj/js/jquery.waypoints.min.js')}}"></script>
+
+     <script src="{{asset('yuvraj/js/jquery.countup.min.js')}}"></script>
+
     <!-- nice select js -->
-    <script src="js/jquery.nice-select.min.js"></script>
+     <script src="{{asset('yuvraj/js/jquery.nice-select.min.js')}}"></script>
+
     <!-- venobox js -->
-    <script src="js/venobox.min.js"></script>
+     <script src="{{asset('yuvraj/js/venobox.min.js')}}"></script>
+
     <!-- sticky sidebar js -->
-    <script src="js/sticky_sidebar.js"></script>
+     <script src="{{asset('yuvraj/js/sticky_sidebar.js')}}"></script>
+
     <!-- wow js -->
-    <script src="js/wow.min.js"></script>
+     <script src="{{asset('yuvraj/js/wow.min.js')}}"></script>
+
     <!-- ex zoom js -->
-    <script src="js/jquery.exzoom.js"></script>
+     <script src="{{asset('yuvraj/js/jquery.exzoom.js')}}"></script>
+
+      <script src="{{asset('yuvraj/js/slick.min.js')}}"></script>
 
     <!--main/custom js-->
-    <script src="js/main.js"></script>
+     <script src="{{asset('yuvraj/js/main.js')}}"></script>
+
+
 
 </body>
 
 
-<!-- Mirrored from html.themefax.com/regfood/forgot_password.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Apr 2024 09:08:19 GMT -->
+<!-- Mirrored from html.themefax.com/regfood/sign_in.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Apr 2024 09:08:19 GMT -->
 </html>

@@ -9,16 +9,7 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
     <title>ExtraaazPos || Web Ordering </title>
     <link rel="icon" type="image/png" href="yuvraj/images/favicon.png">
-    {{-- <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/nice-select.css">
-    <link rel="stylesheet" href="css/custom_spacing.css">
-    <link rel="stylesheet" href="css/venobox.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/jquery.exzoom.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css"> --}}
+    
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
     <link  href="{{ asset('yuvraj/css/style.css')}}" rel="stylesheet">
@@ -30,22 +21,7 @@
     <link  href="{{ asset('yuvraj/css/nice-select.css')}}" rel="stylesheet">
     <link  href="{{ asset('yuvraj/css/responsive.css')}}" rel="stylesheet">
     <link  href="{{ asset('yuvraj/css/slick.css')}}" rel="stylesheet">
-    <link  href="{{ asset('yuvraj/css/venobox.css')}}" rel="stylesheet">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <link  href="{{ asset('yuvraj/css/venobox.css')}}" rel="stylesheet"> 
 </head>
 
 <body>
@@ -89,7 +65,7 @@
     ==============================-->
     <nav class="navbar navbar-expand-lg main_menu">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="{{ url('/')}}">
                 <img src="yuvraj/images/logo.png" alt="RegFood" class="img-fluid">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -100,20 +76,20 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav m-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{{ url('/')}}">Home</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="menu.html">menu</a>
+                        <a class="nav-link" href="{{ url('/menu')}}">menu</a>
                     </li> 
                     <li class="nav-item">
                         <a class="nav-link" href="#">pages <i class="far fa-angle-down"></i></a>
                         <ul class="droap_menu">
-                            <li><a href="menu_details.html">menu details</a></li>
-                             <li><a href="cart_view.html">cart view</a></li>
-                            <li><a href="check_out.html">checkout</a></li>
-                            <li><a href="payment.html">payment</a></li>
-                             <li><a href="404.html">404/Error</a></li>
+                            <li><a href="{{ url('/menu_details')}}">menu details</a></li>
+                             <li><a href="{{ url('/cart_view')}}">cart view</a></li>
+                            <li><a href="{{ url('/check_out')}}">checkout</a></li>
+                            <li><a href="{{ url('/payment')}}">payment</a></li>
+                             <li><a href="{{ url('/404')}}">404/Error</a></li>
                              <!-- <li><a href="sign_in.html">sign in</a></li> -->
                             <!-- <li><a href="sign_up.html">sign up</a></li> -->
                             <!-- <li><a href="forgot_password.html">forgot password</a></li> -->
@@ -121,7 +97,7 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">contact</a>
+                        <a class="nav-link" href="{{ url('/contact')}}">contact</a>
                     </li>
                 </ul>
                 <ul class="menu_icon d-flex flex-wrap">
@@ -134,7 +110,7 @@
                     </li>
                    
                     <li>
-                         <button onclick="window.location.href='sign_in.html'" class="btn btn-primary" style="background: #ff7c0826; color: var(--colorBlack);border-radius:20px;border: none;    font-weight: 600; ">Login</button>
+                        <button onclick="window.location.href = '{{ url('/sign_in') }}'" class="btn btn-primary" style="background: #ff7c0826; color: var(--colorBlack);border-radius:20px;border: none; font-weight: 600;">Login</button>
 
                     </li>
                     
@@ -1178,7 +1154,7 @@
                 <div class="row justify-content-between">
                     <div class="col-xxl-4 col-lg-4 col-sm-9 col-md-7">
                         <div class="footer_content"> 
-                            <a class="footer_logo" href="index.html">
+                            <a class="footer_logo" href="{{ url('/')}}">
                                 <img src="yuvraj/images/footer_logo.png" alt="RegFood" class="img-fluid w-100">
                             </a>
                             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta facere delectus qui
@@ -1197,7 +1173,7 @@
                         <div class="footer_content">
                             <h3>Short Link</h3>
                             <ul>
-                                <li><a href="#">Home</a></li>
+                                <li><a href="{{ url('/welcome')}}" >Home</a></li>
                                 <li><a href="#">About Us</a></li>
                                 <li><a href="#">Contact Us</a></li>
                                 <li><a href="#">Our Service</a></li>
@@ -1253,9 +1229,8 @@
         SCROLL BUTTON END 
     ==============================-->
 
-
-    <!--jquery library js-->
-     <script src="{{asset('yuvraj/js/jquery-3.6.0.min.js')}}"></script>
+     <!--jquery library js-->
+     <script src="{{ asset('yuvraj/js/jquery-3.6.0.min.js')}}"></script>
     <!--bootstrap js-->
      <script src="{{asset('yuvraj/js/bootstrap.bundle.min.js')}}"></script>
 
@@ -1287,6 +1262,7 @@
     <!-- ex zoom js -->
      <script src="{{asset('yuvraj/js/jquery.exzoom.js')}}"></script>
 
+      <script src="{{asset('yuvraj/js/slick.min.js')}}"></script>
 
     <!--main/custom js-->
      <script src="{{asset('yuvraj/js/main.js')}}"></script>
