@@ -10,7 +10,7 @@
     <title>ExtraaazPos || Web Ordering </title>
     <link rel="icon" type="image/png" href="yuvraj/images/favicon.png">
     
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <link  href="{{ asset('yuvraj/css/style.css')}}" rel="stylesheet">
     <link  href="{{ asset('yuvraj/css/all.min.css')}}" rel="stylesheet">
@@ -83,7 +83,7 @@
                         <a class="nav-link" href="{{ url('/menu')}}">menu</a>
                     </li> 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">pages <i class="far fa-angle-down"></i></a>
+                        <a class="nav-link active" href="#">pages <i class="far fa-angle-down"></i></a>
                         <ul class="droap_menu">
                             <li><a href="{{ url('/menu_details')}}">menu details</a></li>
                              <li><a href="{{ url('/cart_view')}}">cart view</a></li>

@@ -10,7 +10,7 @@
     <title>ExtraaazPos || Web Ordering </title>
     <link rel="icon" type="image/png" href="yuvraj/images/favicon.png">
     
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <link  href="{{ asset('yuvraj/css/style.css')}}" rel="stylesheet">
     <link  href="{{ asset('yuvraj/css/all.min.css')}}" rel="stylesheet">
@@ -76,11 +76,11 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav m-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ url('/')}}">Home</a>
+                        <a class="nav-link " aria-current="page" href="{{ url('/')}}">Home</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/menu')}}">menu</a>
+                        <a class="nav-link active" href="{{ url('/menu')}}">menu</a>
                     </li> 
                     <li class="nav-item">
                         <a class="nav-link" href="#">pages <i class="far fa-angle-down"></i></a>
